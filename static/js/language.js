@@ -10,8 +10,17 @@ let elements = {
     btnChangeLanguage: function() {return document.getElementById('btnChangeLanguage')},
     formalExperiences: function() {return document.getElementById('formalExperiences')},
     formalExperiencesTitle: function() {return document.getElementById('formalExperiencesTitle')},
+    personalProjectsTitle: function() {return document.getElementById('personalProjectsTitle')},
+    personalProjects: function() {return document.getElementById('personalProjects')},
+    personalProjectsBottom: function() {return document.getElementById('personalProjectsBottom')},
     coursesTitle: function() {return document.getElementById('coursesTitle')},
-    courses: function() {return document.getElementById('courses')}
+    coursesCareer: function() {return document.getElementById('coursesCareer')},
+    courses: function() {return document.getElementById('courses')},
+    fewWords: function() {return document.getElementById('fewWords')},
+    mainlyMasterTitle: function() {return document.getElementById('mainlyMasterTitle')},
+    alsoWorkWith: function() {return document.getElementById('alsoWorkWith')},
+    canHandleWith: function() {return document.getElementById('canHandleWith')},
+    cvDisclaimer: function() {return document.getElementById('cvDisclaimer')}
 }
 
 let texts = {
@@ -31,13 +40,49 @@ let texts = {
         if (language === Languages.English) {return "Since the ending of 2018, I formally worked on:"}
         else if (language === Languages.Spanish) {return "Desde fines de 2018, trabajé formalmente en:"}
     },
-    coursesTitle: function() {
+    personalProjectsTitle: function() {
         if (language === Languages.English) {return "Along with previously mentioned, I also worked parallelly at home for hobbie and self learning on the following personal projects:"}
         else if (language === Languages.Spanish) {return "Junto con lo mencionado previamente, también trabajé en casa por hobbie y aprendizaje autodidacta con los siguientes proyectos personales:"}
     },
-    courses: function() {
+    personalProjects: function() {
         if (language === Languages.English) {return "<li><strong>HitMeApp</strong><br>A web project with Django that periodically with Celery collects data from crypto currencies and builds a history.</li><hr><li><strong>Pyrty</strong><br>A web forum made with Django where users can add topics and subtopics, send private messages, post and comment stuff, voting them too.</li><hr><li><strong>Snake Case</strong><br>The famous snake game running on your terminal with Python :) (Two weeks with covid turned into this).</li><hr><li><strong>Burner</strong><br>A pure Python project running inside a Docker container which collected data from Falabella and Sodimac using requests and stored the info in CSV files. This project was supervised by my senior mentor at Globant.</li><hr><li><strong>Caronte (Web)</strong><br>Web version of my project that helped me to manage my money day to day during tough economy times before working as a developer. Used Django and Postgres.</li><hr><li><strong>Caronte (Android)</strong><br>Mobile version of the previously mentioned. Used Java and Android Studio.</li><hr><li><strong>Rat On</strong><br>A Python project that measured the response time of different famous web pages using Celery and displaying the results on graphics with Javascript running on a Django server.</li><hr><li><strong>Scrappy</strong><br>This was a freelancer project that I made for digital marketing consultors to automate data scraping while I was boring at Globant during the non challenging Java project.</li><hr><li><strong>Unidigi</strong><br>My first Python project was for teachers and students. A web platform that facilitated taking exams. Teachers could create their own exams with multiple-choice questions and allowing the student(s) they wanted to take the exam. The studen(s) were able to peform the exam within the time set by the teacher and it showed the final score once finished.</li>"}
         else if (language === Languages.Spanish) {return "<li><strong>HitMeApp</strong><br>Un proyecto web con Django que periódicamente con Celery recolecta info de criptomonedas y construye un historial.</li><hr><li><strong>Pyrty</strong><br>Un foro web hecho con Django donde los usuarios pueden añadir tópicos y subtópicos, enviar mensajes privados, postear y comentar cosas, y votar estos últimos también.</li><hr><li><strong>Snake Case</strong><br>El famoso juego de la serpiente corriendo en tu terminal con Python :) (Dos semanas con covid se convirtieron en esto).</li><hr><li><strong>Burner</strong><br>Un proyecto de Python puro corriendo en un contenedor de Docker, el cual recolecta información de Falabella y Sodimac usando la librería requests y guardando la info obtenida en archivos CSV. Este proyecto fue supervisado por mi mentor senior en Globant.</li><hr><li><strong>Caronte (Web)</strong><br>Versión web de mi proyecto el cual me ayudaba a administrar mi dinero a diario durante tiempos de economía difícil antes de trabajar formalmente como desarrollador. Usé Django y Postgres.</li><hr><li><strong>Caronte (Android)</strong><br>Versión mobile del proyecto mencionado anteriormente. Usé Java y Android Studio.</li><hr><li><strong>Rat On</strong><br>Un proyecto de Python que mide el tiempo de respuesta de diferentes páginas conocidas utilizando Celery y mostrando los resultados en gráficos con JavaScript corriendo en un servidor de Django.</li><hr><li><strong>Scrappy</strong><br>Este fue un proyecto freelancer que hice para consultores de marketing digital para automatizar data scraping mientras estaba aburrido en el proyecto de Java de Globant.</li><hr><li><strong>Unidigi</strong><br>Mi primer proyecto en Python fue para profesores y estudiantes. Una plataforma web que facilitaba tomar exámenes. Los profesores podían crear exámenes con preguntas multiple-choice y permitir a los estudiantes que ellos deseaban realizarlos. Los estudiantes podían tomar los exámenes dentro del tiempo límite configurado por el profesor y ver la puntuación al finalizar.</li>"}
+    },
+    personalProjectsBottom: function() {
+        if (language === Languages.English) {return 'I made many other projects during the university and following all kind of courses/tutorials.<a href="https://github.com/gonza56d">All the repositories of the previously listed projects are publicly available on my Github.</a>'}
+        else if (language === Languages.Spanish) {return 'Hice otros muchos proyects durante la universidad y siguiendo todo tipo de cursos y tutoriales.<a href="https://github.com/gonza56d">Todos los repositorios de los proyectos anteriormente mencionados se encuentran en mi Github.</a>'}
+    },
+    coursesTitle: function() {
+        if (language === Languages.English) {return '<strong>I have completed the following courses at Platzi:</strong> (<a href="https://platzi.com/p/gonzad56/">My certifications here</a>)'}
+        else if (language === Languages.Spanish) {return '<strong>Finalicé los siguientes cursos en Platzi:</strong> (<a href="https://platzi.com/p/gonzad56/">Mis certificaciones aquí</a>)'}
+    },
+    coursesCareer: function() {
+        if (language === Languages.English) {return "I have completed the 'Backend Development with Python and Django' career at Platzi:"}
+        else if (language === Languages.Spanish) {return "He finalizado la carrera de 'Desarrollador Backend con Python y Django' en Platzi:"}
+    },
+    courses: function() {
+        if (language === Languages.English) {return '<div class="badge badge-pill badge-warning">Advanced Django</div> <div class="badge badge-pill badge-warning">Advanced Java SE</div> <div class="badge badge-pill badge-warning">Linux Terminal and Command Line</div> <div class="badge badge-pill badge-warning">Basic Django</div> <div class="badge badge-pill badge-warning">Basic Python</div> <div class="badge badge-pill badge-warning">Bootstrap 4</div> <div class="badge badge-pill badge-warning">Celery 4</div> <div class="badge badge-pill badge-warning">Definitive HTML and CSS</div> <div class="badge badge-pill badge-warning">Flask</div> <div class="badge badge-pill badge-warning">Databases Fundamentals</div> <div class="badge badge-pill badge-warning">Introduction to Java SE</div> <div class="badge badge-pill badge-warning">Introduction to MySQL</div> <div class="badge badge-pill badge-warning">Introduction to Selenium with Python</div> <div class="badge badge-pill badge-warning">OOP with Java</div> <div class="badge badge-pill badge-warning">Swarm</div> <div class="badge badge-pill badge-warning">Practice with Python: CRUD development</div></ul>'}
+        else if (language === Languages.Spanish) {return '<div class="badge badge-pill badge-warning">Django Avanzado</div> <div class="badge badge-pill badge-warning">Java SE Avanzado</div> <div class="badge badge-pill badge-warning">Terminal Linux</div> <div class="badge badge-pill badge-warning">Django Básico</div> <div class="badge badge-pill badge-warning">Python Básico</div> <div class="badge badge-pill badge-warning">Bootstrap 4</div> <div class="badge badge-pill badge-warning">Celery 4</div> <div class="badge badge-pill badge-warning">HTML y CSS Definitivo</div> <div class="badge badge-pill badge-warning">Flask</div> <div class="badge badge-pill badge-warning">Fundamentos de Bases de Datos</div> <div class="badge badge-pill badge-warning">Introducción a Java SE</div> <div class="badge badge-pill badge-warning">Introducción a MySQL</div> <div class="badge badge-pill badge-warning">Introducción a Selenium con Python</div> <div class="badge badge-pill badge-warning">POO con Java</div> <div class="badge badge-pill badge-warning">Swarm</div> <div class="badge badge-pill badge-warning">Práctico con Python: creación de CRUD</div></ul>'}
+    },
+    fewWords: function() {
+        if (language === Languages.English) {return 'In a few words...'}
+        else if (language === Languages.Spanish) {return 'En resumen...'}
+    },
+    mainlyMasterTitle: function() {
+        if (language === Languages.English) {return 'I mainly master:'}
+        else if (language === Languages.Spanish) {return 'Domino muy bien las tecnologías:'}
+    },
+    alsoWorkWith: function() {
+        if (language === Languages.English) {return 'But I also worked a lot with:'}
+        else if (language === Languages.Spanish) {return 'Pero también he trabajado mucho con:'}
+    },
+    canHandleWith: function() {
+        if (language === Languages.English) {return "And I don't work with these, but I can handle:"}
+        else if (language === Languages.Spanish) {return "Y no trabajo con estos, pero me las puedo arreglar:"}
+    },
+    cvDisclaimer: function() {
+        if (language === Languages.English) {return "(This CV is made from scratch by me using them)."}
+        else if (language === Languages.Spanish) {return "(Este CV fue hecho desde cero por mí usando las tecnologías mencionadas)."}
     }
 }
 
@@ -46,8 +91,17 @@ function setTexts() {
     elements.btnChangeLanguage().innerText = texts.btnChangeLanguage();
     elements.formalExperiences().innerHTML = texts.formalExperiences();
     elements.formalExperiencesTitle().innerText = texts.formalExperiencesTitle();
-    elements.coursesTitle().innerText = texts.coursesTitle();
+    elements.personalProjectsTitle().innerText = texts.personalProjectsTitle();
+    elements.personalProjects().innerHTML = texts.personalProjects();
+    elements.personalProjectsBottom().innerHTML = texts.personalProjectsBottom();
+    elements.coursesTitle().innerHTML = texts.coursesTitle();
+    elements.coursesCareer().innerHTML = texts.coursesCareer();
     elements.courses().innerHTML = texts.courses();
+    elements.fewWords().innerText = texts.fewWords();
+    elements.mainlyMasterTitle().innerText = texts.mainlyMasterTitle();
+    elements.alsoWorkWith().innerText = texts.alsoWorkWith();
+    elements.canHandleWith().innerText = texts.canHandleWith();
+    elements.cvDisclaimer().innerText = texts.cvDisclaimer()
 }
 
 function changeLanguage() {
