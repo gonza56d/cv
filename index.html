@@ -11,11 +11,10 @@
     <title>Gonzalo García CV</title>
   </head>
 
-  <script src="static/js/texts.js"></script>
-  <body onload="loadConsts()" style="background-color: #0e2439;">
+  <body onload="setTexts()" style="background-color: #0e2439;">
 
     <nav class="navbar sticky-top">
-        <button class="btn btn-info ml-auto mr-md-5" href="#">Change Language</a>
+        <button id="btnChangeLanguage" class="btn btn-info ml-auto mr-md-5" onclick="changeLanguage()">Change Language</a>
     </nav>
 
     <div class="container">
@@ -257,6 +256,7 @@
 
     <script src="static/js/jquery.min.js"></script>
     <script src="static/js/bootstrap.bundle.min.js"></script>
+    <script src="static/js/language.js"></script>
 
   </body>
 </html>
