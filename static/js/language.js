@@ -73,12 +73,12 @@ let texts = {
         else if (language === Languages.Spanish) {return 'Domino muy bien las tecnologías:'}
     },
     alsoWorkWith: function() {
-        if (language === Languages.English) {return 'But I also worked a lot with:'}
-        else if (language === Languages.Spanish) {return 'Pero también he trabajado mucho con:'}
+        if (language === Languages.English) {return 'I am good also with:'}
+        else if (language === Languages.Spanish) {return 'También soy bueno con:'}
     },
     canHandleWith: function() {
-        if (language === Languages.English) {return "And I don't work with these, but I can handle:"}
-        else if (language === Languages.Spanish) {return "Y no trabajo con estos, pero me las puedo arreglar:"}
+        if (language === Languages.English) {return "I have worked and I can handle with:"}
+        else if (language === Languages.Spanish) {return "He trabajado y me las puedo arreglar con:"}
     },
     cvDisclaimer: function() {
         if (language === Languages.English) {return "(This CV is made from scratch by me using them)."}
